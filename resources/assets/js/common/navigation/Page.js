@@ -32,6 +32,7 @@ class Page extends React.Component {
     render() {
         this.avatar = (
             <span>
+                {this.props.userAvatar}
                  <Image avatar src={require('../../../images/avatar/boy.png')}
                         verticalAlign='top'/> {this.props.userName}
             </span>
@@ -42,7 +43,7 @@ class Page extends React.Component {
                     <Menu size="large" inverted secondary>
                         <Menu.Item as={Link} to="/" className="logo" replace>
                             <img
-                                src={require('../../../images/theme/infotiq-logo.png')} alt="infoTiq"/>
+                                src={require('../../../images/theme/ducklogo_v0.1.png')} alt="infoTiq"/>
                         </Menu.Item>
                         <Menu.Menu position="right">
                             <Menu.Item>
@@ -70,7 +71,7 @@ class Page extends React.Component {
                     <Menu inverted pointing secondary size='large'>
                         <Container>
                             <Menu.Item as={Link} to="/" className="logo" replace><img
-                                src={require('../../../images/theme/infotiq-logo.png')} alt="infoTiq"/></Menu.Item>
+                                src={require('../../../images/theme/ducklogo_v0.1.png')} alt="infoTiq"/></Menu.Item>
                             <Menu.Item as={NavLink} to="/dashboard">Dashboard</Menu.Item>
                             <Menu.Menu position='right'>
                                 {this.props.isAuthenticated

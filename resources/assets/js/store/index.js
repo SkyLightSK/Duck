@@ -4,10 +4,12 @@ import RootReducer from './reducers'
 import ReduxThunk from 'redux-thunk'
 import {autoRehydrate,persistStore} from 'redux-persist'
 
+import { composeWithDevTools } from 'redux-devtools-extension';
+
 
 const store = createStore(
     RootReducer,
-    compose(
+    composeWithDevTools( //for removing devtools just "compose" :3
         applyMiddleware(ReduxThunk,logger),
         autoRehydrate()
     )

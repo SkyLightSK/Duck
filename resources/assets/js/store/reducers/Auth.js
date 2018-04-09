@@ -5,6 +5,7 @@ const user = {
     id: null,
     name: null,
     email: null,
+    avatar: null,
     createdAt: null,
     updatedAt: null
 };

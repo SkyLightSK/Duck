@@ -19,3 +19,11 @@ export function authCheck(){
         type:ActionTypes.AUTH_CHECK
     }
 }
+
+//Time Tracking
+export function userStartedTime(payload) {
+    return {
+        type:ActionTypes.USER_STARTED_TIME,
+        payload
+    }
+}

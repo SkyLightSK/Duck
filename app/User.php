@@ -33,4 +33,8 @@ class User extends Authenticatable
         // Your your own implementation.
         $this->notify(new ResetPasswordNotification($token, $this->getEmailForPasswordReset()));
     }
+
+    public function time(){
+        return $this->hasMany(TimeTrack::class);
+    }
 }

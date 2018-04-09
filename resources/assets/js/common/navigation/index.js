@@ -8,6 +8,8 @@ const mapStateToProps = state => {
     return {
         isAuthenticated : state.Auth.isAuthenticated,
         userName : state.Auth.user.name,
+        userEmail : state.Auth.user.email,
+        userAvatar : state.Auth.user.avatar
     }
 };
 

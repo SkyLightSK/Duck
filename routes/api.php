@@ -29,3 +29,11 @@ Route::middleware(['jwt_auth'])->group(function(){
        return "Cool dude";
    });
 });
+
+//Time
+Route::get('currentTime','TimeTrackController@apiTime');
+Route::get('allUsersTime','TimeTrackController@allUsersTime');
+Route::get('userTime/{user_id}','TimeTrackController@userTime');
+
+Route::post('addUserTime','TimeTrackController@addUserTime');
+Route::post('updateUserTime','TimeTrackController@updateUserTime');
